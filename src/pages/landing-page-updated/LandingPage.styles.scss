@@ -1,0 +1,106 @@
+.landing-page {
+    @apply bg-black;
+
+    &.light-mode {
+        @apply bg-white
+    }
+
+    .separator {
+        background: linear-gradient(90deg, #1a1a1a 0%, #fff 50%, #404040 100%);
+        width: 100%;
+        height: 1px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .we-are {
+        position: relative;
+
+        &:before {
+            content: 'WE ARE';
+            position: absolute;
+            bottom: 2rem;
+            left: -3rem;
+            font-family: 'Plus Jakarta Sans';
+            font-weight: 800;
+            color: white;
+            font-size: 12px;
+            transform: rotateZ(-90deg);
+            padding: 4px 6px;
+            border: 1px solid white;
+        }
+
+        @media (max-width: 768px) {
+            &:before {
+                bottom: 1.2rem;
+                left: -2.5rem;
+                font-size: 8px;
+            }
+        }
+    }
+
+    //------------------------------- LIGHT / DARK MODE TOGGLES ------------------------------------------
+    .light-mode-button > span {
+        @apply text-white;
+    }
+
+    .light-mode-button,
+    .desktop-nav-container {
+        @apply bg-[#262626];
+    }
+
+    .desktop-nav-container .nav_link {
+        @apply text-white;
+
+        &__active {
+            @apply bg-[#CDCDCD] text-black;
+        }
+    }
+
+    .mobile-nav-link {
+        @apply text-white;
+    }
+
+    .header {
+        @apply bg-black;
+    }
+
+    .sidebar {
+        @apply bg-black;
+    }
+
+    &.light-mode {
+        .light-mode-button {
+            @apply bg-[#FFF2D1];
+
+            & > span {
+                @apply text-black;
+            }
+        }
+
+        .desktop-nav-container {
+            @apply bg-black;
+
+            & .nav_link {
+                @apply text-white;
+
+                &__active {
+                    @apply text-black;
+                }
+            }
+        }
+
+        .header {
+            @apply bg-white;
+        }
+
+        .sidebar {
+            @apply bg-white;
+        }
+
+        .mobile-nav-link {
+            @apply text-black;
+        }
+    }
+}
+
